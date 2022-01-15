@@ -6,6 +6,11 @@ plugins {
 group 'qa.guru.allure'
 version '1.0-SNAPSHOT'
 
+//для распознания всех алфавитов на Windows, но иногда не помогает
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
 allure{ //подключение allure
             report {
                 version.set("2.17.2")
